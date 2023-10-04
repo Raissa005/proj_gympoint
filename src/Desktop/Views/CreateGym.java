@@ -56,12 +56,12 @@ public class CreateGym extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel4 = new javax.swing.JLabel();
-        tfGymName = new javax.swing.JTextField();
+        gymName = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        tfPhone = new javax.swing.JTextField();
+        phone = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        taDescription = new javax.swing.JTextArea();
+        description = new javax.swing.JTextArea();
         jLabel7 = new javax.swing.JLabel();
         panelMap = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
@@ -81,20 +81,20 @@ public class CreateGym extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("JetBrainsMono NF", 1, 14)); // NOI18N
         jLabel4.setText("Descrição");
 
-        tfGymName.setFont(new java.awt.Font("Fira Sans", 0, 18)); // NOI18N
+        gymName.setFont(new java.awt.Font("Fira Sans", 0, 18)); // NOI18N
 
         jLabel5.setFont(new java.awt.Font("JetBrainsMono NF", 1, 14)); // NOI18N
         jLabel5.setText("Telefone");
 
-        tfPhone.setFont(new java.awt.Font("Fira Sans", 0, 18)); // NOI18N
+        phone.setFont(new java.awt.Font("Fira Sans", 0, 18)); // NOI18N
 
         jLabel6.setFont(new java.awt.Font("JetBrainsMono NF", 1, 14)); // NOI18N
         jLabel6.setText("Nome da Academia");
 
-        taDescription.setColumns(20);
-        taDescription.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        taDescription.setRows(5);
-        jScrollPane1.setViewportView(taDescription);
+        description.setColumns(20);
+        description.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        description.setRows(5);
+        jScrollPane1.setViewportView(description);
 
         jLabel7.setFont(new java.awt.Font("JetBrainsMono NF", 1, 14)); // NOI18N
         jLabel7.setText("Endereço (Localização)");
@@ -145,11 +145,11 @@ public class CreateGym extends javax.swing.JFrame {
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(tfGymName)
+                                .addComponent(gymName)
                                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 446, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(tfPhone)
+                                .addComponent(phone)
                                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 670, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(panelMap, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -168,17 +168,16 @@ public class CreateGym extends javax.swing.JFrame {
                         .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(26, 26, 26)
-                        .addComponent(tfGymName, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(gymName, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel5)
                             .addComponent(jLabel6))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tfPhone, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(phone, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -198,9 +197,9 @@ public class CreateGym extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        String gymName = this.tfGymName.getText();
-        String phone = this.tfPhone.getText();
-        String description = this.taDescription.getText();
+         String gymName = this.gymName.getText();
+        String phone = this.phone.getText();
+        String description = this.description.getText();
         Double latitute = this.geoPositionSelected.getLatitude();
         Double longitude = this.geoPositionSelected.getLongitude();
 
@@ -212,6 +211,8 @@ public class CreateGym extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextArea description;
+    private javax.swing.JTextField gymName;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
@@ -223,8 +224,6 @@ public class CreateGym extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JPanel panelMap;
-    private javax.swing.JTextArea taDescription;
-    private javax.swing.JTextField tfGymName;
-    private javax.swing.JTextField tfPhone;
+    private javax.swing.JTextField phone;
     // End of variables declaration//GEN-END:variables
 }

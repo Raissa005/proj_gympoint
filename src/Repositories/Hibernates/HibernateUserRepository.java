@@ -18,16 +18,17 @@ public class HibernateUserRepository implements UserRepository{
     @Override
     public User createUser(User user){
          try {
-            this.entityManager.getTransaction.begin();
+            this.entityManager.getTransaction().begin();
             this.entityManager.persist(user);
-            this.entityManager.commit();
+            this.entityManager.getTransaction().commit();
+            return user;
         }finally{
             this.entityManager.close();
         }
     }
     
     @Override
-    public User findByEmail(String  email){
+    public User findByEmail(String email){
         try {
             TypedQuery<User> query = this.entityManager.createQuery("SELECT u FROM User u WHERE u.email = :email", User.class);
             query.setParameter("email", email);
